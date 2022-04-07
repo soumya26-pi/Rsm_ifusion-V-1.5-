@@ -1,0 +1,14 @@
+,Brokerage,PDF Table Header,PDF Key,Classification category,columns_to_extract,Table_ending_key,Table_ending_column,Unnamed: 7,Unnamed: 8
+0,Charles Schwab,Asset Composition,Equities,Investment Value,Market Value,,,,
+1,Charles Schwab,Asset Composition,Other Assets,Investment Value,Market Value,,,,
+2,Charles Schwab,Asset Composition,"Cash, Money Market & Deposit Accounts",Cash Value,Market Value,,,,
+3,Charles Schwab,Cash Transactions Summary,Deposits and Other Cash Credits,Deposits & Withdrawals,This Period,,,,
+4,Charles Schwab,Cash Transactions Summary,Withdrawals and Other Debits,Deposits & Withdrawals,This Period,,,,
+5,Charles Schwab,Cash Transactions Summary,Fees and Charges,Fees & Charges,This Period,,,,
+6,Charles Schwab,Income Summary,Cash Dividends,Dividends & Dividend Reinvestment,Federally Taxable,,,,
+7,Charles Schwab,Income Summary,Treasury Bond interest,Interest Income,Federally Taxable,,,,
+8,Charles Schwab,Income Summary,Deposit Account Interest,Interest Income,Federally Taxable,,,,
+9,Charles Schwab,Gain or (Loss) Summary,All Investments,Realized Gains/Losses,Short Term,,,,
+10,Charles Schwab,Gain or (Loss) Summary,All Investments,Realized Gains/Losses,Long Term,,,,
+11,Charles Schwab,Cash Transactions Summary,Investments Sold,Realized Gains/Losses,This Period,,,,
+12,Charles Schwab,Cash Transactions Summary,Investments Purchased,Stock Acquisition,This Period,,,,`
