@@ -776,19 +776,19 @@ def tab_ext():
     elif ss is None:
         st.write("No keys to extract table")
 
-def truncate_tb(trt):
-    global zx
-    heads1 = st.text_input("Enter Table Name to get Truncate Values")
-    if heads1:
-        lengths = st.text_input("Enter length of Table right side")
-        if lengths:
-            lengths = int(lengths)
-            heads1 = heads1.lower()
-            zx = [i for i in trt if heads1 in i]
-            zx = zx[0]
-            # st.write(zx)
+# def truncate_tb(trt):
+#     global zx
+#     heads1 = st.text_input("Enter Table Name to get Truncate Values")
+#     if heads1:
+#         lengths = st.text_input("Enter length of Table right side")
+#         if lengths:
+#             lengths = int(lengths)
+#             heads1 = heads1.lower()
+#             zx = [i for i in trt if heads1 in i]
+#             zx = zx[0]
+#             # st.write(zx)
 
-            multi_tru(lengths)
+#             multi_tru(lengths)
 
 def handle_multipleline(wordslist):
     words_temp = []
@@ -1112,49 +1112,7 @@ def main():
                             #     st.success("File Uploaded")
                             run_extraction(upload_file,ll)
                             tab_ext()
-                            
-                elif tasknew =="Truncate":
-                    st.subheader("Extraction ++")
-                    pp=st.text_input("Please Enter project_id")
-
-                    if pp:
-
-                        project_results = view_all_projects()
-                        
-                        
-                        clean_id = pd.DataFrame(project_results,columns=["project_id","username","project_name","File_Location"])
-                        
-                        match = clean_id[clean_id['project_id']==int(pp)]
-                        
-                        st.dataframe(match)
-                        st.warning("Please Dont Upload PDF File If project_id is Empty")
-                        st.warning("Please Upload Your Brokerage PDF File Matches to Mapping File")
-                        ref = match.values.tolist()
-                        ref = ref[-1]
-                        ref = ref[3]
-                        # st.write(ref)
-                        ler = './csvdump'+"/"+str(username)
-                        # ler2 = file_details
-                        ll2= ler+str("/")+str(ref)
-                        ld = pd.read_csv(ll2)
-                        trt = ld[~ld['PDF Key'].notnull()]
-                        trt= trt[['PDF Table Header','Table_ending_key', 'Table_ending_column']]
-                        trt = trt.applymap(str.lower)
-                        # st.write(trt)
-                        # st.write(trt)
-
-                        st.header("RSM")
-                        trt = trt.values.tolist()
-                        # st.write(trt)
-              
-                        upload_file = st.file_uploader('Please Upload Your Brokerage PDF File')
-                         
-                       
-                        if upload_file:
-                            pdf_ob2 = pdfplumber.open(upload_file)
-                            page_cnt2 = list(range(len(pdf_ob2.pages)))
-                            truncate_tb(trt)
-
+                      
      
                         
                     
