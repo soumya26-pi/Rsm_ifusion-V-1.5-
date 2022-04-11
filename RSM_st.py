@@ -1049,7 +1049,7 @@ def main():
 
               
 
-                tasknew = st.sidebar.selectbox("Data Extraction",["Deselect","Extraction","Truncate","Run_History"])
+                tasknew = st.sidebar.selectbox("Data Extraction",["Deselect","Extraction","Run_History"])
                 if tasknew == "Deselect":
                     print("")
                 elif tasknew == "Run_History":
